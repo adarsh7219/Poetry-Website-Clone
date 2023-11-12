@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="shortcut icon" href="https://tse3.mm.bing.net/th?id=OIP.dPWv7mUoq5uNcXcPVUkDYwHaHa&pid=Api&P=0&h=220" type="image/x-icon">
+    <title>POETREY</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .navbar {
+        height: 80px;
+        width: 100%;
+        background-color: #fdf8ee;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .navbar>a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .section {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        /* justify-content: space-between; */
+        padding: 0 10px;
+    }
+
+    .section>a {
+        text-decoration: none;
+        padding-left: 10px;
+        color: black;
+        font-weight: 600;
+    }
+
+    .therd-nav {
+        min-width: 400px;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3px;
+    }
+
+    .input {
+        width: 94%;
+        height: 100%;
+        padding: 10px;
+        border: none;
+        background-color: #fdf8ee;
+        /* border: 1px solid black; */
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        border-top-left-radius: none;
+    }
+
+    .input:hover {
+        /* background-color: #fdf8ee; */
+
+    }
+
+    .logo {
+        font-size: 20px;
+        padding: 8px;
+        background-color: #fdf8ee;
+        /* border: 1px solid black; */
+
+        /* border-radius: 2px ; */
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        /* border-top-right-radius: 2px; */
+        /* border-bottom-right-radius: 2px; */
+        cursor: pointer;
+    }
+
+    .logo2 {
+        font-size: 20px;
+        padding: 8px;
+        /* border: 1px solid black; */
+
+
+    }
+
+    .nav-box {
+        height: 60px;
+        width: 160px;
+        border: 2px solid black;
+        background-color: #fdf8ee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+
+    .nav-box:hover {
+        color: white;
+        background-color: rgb(102, 50, 12);
+
+
+    }
+
+    .icon4 {
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .icon4>i {
+        margin-left: 17px;
+        font-size: 24px;
+    }
+
+    .icon4>i:hover {
+        color: blue;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .flex {
+
+        display: flex;
+    }
+
+    .box {
+        /* height: ; */
+        width: 100%;
+        background-color: rgb(142, 207, 209);
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .box>h1 {
+        color: #aa5128;
+    }
+
+    .box>p {
+        position: relative;
+        top: 3px;
+        font-size: 13px;
+    }
+
+
+    /* footer  */
+
+
+    .footer-parent {
+        height: 300px;
+        /* width: 100vw; */
+        background-color: #FFF4E6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        /* top: 300px; */
+
+    }
+
+    .child-footer {
+        height: 200px;
+        width: 50%;
+        background-color: #FFF4E6;
+        border: 1px solid black;
+        /* text-align: center; */
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        top: 30px;
+
+    }
+
+    .child-footer>h6 {
+        position: relative;
+        top: 15px;
+        color: #93573B;
+    }
+
+    .child-footer>h1 {
+        color: #93573B;
+    }
+
+    .plac {
+        width: 400px;
+        height: 40px;
+    }
+
+    .box-plac {
+        height: 40px;
+        width: 100px;
+        /* border: 2px solid black; */
+        position: relative;
+        left: 249px;
+        bottom: 40px;
+        text-align: center;
+        cursor: pointer;
+        background-color: rgb(102, 50, 12);
+        color: white;
+
+
+    }
+
+    .box-plac>h4 {
+        position: relative;
+        top: 7px;
+
+    }
+
+    .checkbox {
+        position: absolute;
+        top: 110px;
+        left: 180px;
+        font-size: 60px;
+
+    }
+
+    .sp {
+        color: blue;
+    }
+
+    .text {
+        position: absolute;
+        top: 110px;
+        cursor: pointer;
+    }
+
+
+    /* last footer  */
+
+    .last-fotter {
+        height: 430px;
+        background-color: #FFF4E6;
+        text-align: center;
+    }
+
+    .child-foot {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .child-foot>h3 {
+        position: relative;
+        bottom: 30px;
+    }
+
+    .child-foot>ul>li {
+        list-style-type: none;
+        position: relative;
+        top: 60px;
+        margin-top: 15px;
+        /* right: 200px; */
+        color: #93573B;
+        text-align: center;
+    }
+
+    .child-foot>ul {
+        position: relative;
+        top: 20px;
+    }
+
+    .span1 {
+        position: relative;
+        left: 40px;
+    }
+
+
+    .span2 {
+        position: relative;
+        left: 40px;
+    }
+
+    .span3 {
+        position: relative;
+        left: 50px;
+    }
+
+    .span4 {
+        position: relative;
+        left: 40px;
+    }
+
+    .span5 {
+        position: relative;
+        left: 23px;
+    }
+
+    .box4 {
+        height: 50px;
+        width: 50%;
+        background-color: aqua;
+    }
+
+    /* footer resposive  */
+
+    #id1 {
+        position: relative;
+        margin-bottom: 30px;
+        bottom: 30px;
+        left: 70px;
+
+        /* right: 200px; */
+        color: #93573B;
+        margin-left: 50px;
+    }
+
+    #id2 {
+        position: relative;
+        bottom: 43px;
+        left: 100px;
+        color: #93573B;
+
+
+
+    }
+
+    #id3 {
+
+        position: relative;
+        bottom: 43px;
+        margin-right: 10px;
+        /* margin-bottom: 30px; */
+        left: 100px;
+        font-weight: 700;
+        color: #93573B;
+    }
+
+    .rd3 {
+        position: relative;
+        bottom: 30px;
+        margin-bottom: 16px;
+    }
+
+
+    .input3 {
+        /* width: 100%; */
+        position: absolute;
+        right: 80px;
+        top: 290px;
+
+    }
+
+
+    .inp {
+        width: 300px;
+        height: 40px;
+        position: absolute;
+        right: 5px;
+        top: 400px;
+    }
+
+    .inp1 {
+        width: 300px;
+        height: 40px;
+        position: absolute;
+        right: 5px;
+        top: 470px;
+
+    }
+
+    .inp2 {
+
+        width: 300px;
+        height: 120px;
+        position: absolute;
+        right: 5px;
+        top: 540px;
+
+
+    }
+
+    #btn {
+        height: 50px;
+        width: 170px;
+        /* border: 2px solid black; */
+        background-color: #FFF4E6;
+        display: none;
+    }
+
+
+    .child-foot>ul{
+        position: relative;
+        top: 40px;
+    }
+
+
+    @media (min-width:320px) and (max-width:1300px) {
+        .input3 {
+            display: none;
+
+        }
+
+        .t6 {
+            display: none;
+        }
+
+        .box {
+            background-color: white;
+        }
+
+
+
+    }
+
+
+    @media (min-width:320px) and (max-width:1300px) {
+
+        .footer-parent {
+            /* height: 50%; */
+            width: 100%;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* margin-top: 400px; */
+        }
+
+        .child-footer {
+            width: 100%;
+
+        }
+
+
+        .child-footer>h1 {
+            font-size: 20px;
+
+        }
+
+        .child-footer>h6 {
+            text-align: center;
+        }
+
+        .plac {
+            width: 255px;
+            height: 40px;
+            position: absolute;
+            left: 0;
+        }
+
+        .box-plac {
+            position: relative;
+            left: 127px;
+            top: 0px;
+            width: 100px;
+        }
+
+        .checkbox {
+            left: 0;
+        }
+
+        .last-fotter {
+            width: 100%;
+            margin-top: 30px;
+            position: absolute;
+        }
+
+        .child-foot {
+            /* flex-direction: column; */
+            /* position: absolute; */
+
+        }
+
+        #id1 {
+            position: relative;
+            margin-top: 10px;
+            font-size: 10px;
+            margin-bottom: 45px;
+            left: 1px;
+            font-weight: 700;
+            color: black;
+            width: 60px;
+            /* text-align: center; */
+
+        }
+
+        .child-foot>ul>li {
+            position: relative;
+            top: 45px;
+            font-size: 9px;
+            font-weight: 700;
+            text-align: center;
+
+        }
+
+        .text {
+            position: absolute;
+            left: 20px;
+        }
+
+        .box-plac {
+            position: absolute;
+            left: 257px;
+            top: 55px;
+        }
+
+
+
+
+
+        .span1 {
+            position: relative;
+            left: 30px;
+
+
+        }
+
+        .span2 {
+            position: relative;
+            left: 35px;
+            bottom: 10px;
+        }
+
+        .span4 {
+            position: relative;
+            left: 26px;
+        }
+
+        .span5 {
+            position: relative;
+            left: 40px;
+            bottom: 10px;
+        }
+
+        .span3 {
+            position: relative;
+            left: 30px;
+
+        }
+
+
+        #id2 {
+            position: relative;
+            left: 65px;
+            font-size: 10px;
+            /* margin-bottom: 30px; */
+            bottom: 50px;
+            color: black;
+
+        }
+
+        #id3 {
+            position: relative;
+            left: 48px;
+            font-size: 10px;
+            margin-bottom: 16px;
+            font-weight: 700;
+            color: black;
+        }
+
+        .child-foot>ul {
+            position: relative;
+            margin-bottom: 35px;
+        }
+
+        .rd3 {
+            position: relative;
+            right: 15px;
+        }
+
+        #btn {
+            width: 100%;
+            background-color: #93573B;
+            position: relative;
+            top: 50px;
+            /* left: 100px; */
+            border-radius: 10px;
+            display: block;
+            /* text-align: center; */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .last-fotter {
+            height: 60%;
+        }
+
+        .lt {
+            position: relative;
+            right: 56px;
+        }
+
+        .car {
+            position: relative;
+            right: 56px;
+            /* font-size: 13px; */
+            /* font-weight: 700; */
+        }
+
+    }
+
+
+
+    .btn3 {
+        height: 50px;
+        width: 100%;
+        background-color: #93573B;
+        border: 2px solid black;
+        position: absolute;
+        top: 960px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+
+    .btn3:hover {
+        background-color: #aa5128;
+    }
+
+
+
+
+
+    @media (min-width:320px) and (max-width:1300px) {
+
+        .btn3 {
+            display: none;
+        }
+
+        .box2>h1 {
+            position: relative;
+            top: 180px;
+        }
+
+
+        .meed-section {
+            height: 220px;
+            width: 100%;
+        }
+
+        .meed-section>h1 {
+            text-align: center;
+
+
+
+        }
+
+        .meed-section>h3 {
+            text-align: center;
+
+
+        }
+
+        .kavi {
+            text-align: center;
+            /* margin-top: 10px; */
+            /* margin-bottom: 20px; */
+            position: relative;
+            top: 5px;
+        }
+
+        .smol-box {
+            height: 40px;
+            width: 40px;
+            position: absolute;
+            top: 354px;
+
+        }
+
+        .box1 {
+            position: relative;
+            bottom: 20px;
+        }
+
+    }
+
+    @media (min-width:320px) and (max-width:1300px) {
+
+        .box {
+            width: 100%;
+        }
+    }
+
+
+
+
+
+
+
+    @media (min-width:320px) and (max-width:1300px) {
+
+        .navbar {
+            width: 100%;
+            height: 120px;
+        }
+
+        .section {
+
+            width: 100%;
+            height: 60%;
+            position: absolute;
+            flex-direction: column;
+            background-color: white;
+            /* position: relative; */
+            left: -100%;
+            top: 0;
+            z-index: 100;
+            padding-block: 20px;
+            transition: 0.2s ease-in-out;
+
+
+        }
+
+        /* .section>a{
+        text-align: center;
+        position: relative;
+        top: 50px;
+        
+        
+    } */
+
+        .section.active {
+            left: 0;
+        }
+
+        .section>a {
+
+            margin-top: 10px;
+            /* flex-direction: column; */
+
+
+        }
+
+        .menu {
+            z-index: 1500;
+        }
+
+        .navbar>a {
+            font-size: 10px;
+            position: absolute;
+            top: 8px;
+
+        }
+
+        .therd-nav {
+            min-width: 300px;
+            position: relative;
+            top: 10px;
+        }
+
+        .loader>h1 {
+            font-size: 50px;
+            text-align: center;
+        }
+
+        .nav-box {
+            display: none;
+        }
+
+        .icon4 {
+            display: block;
+            position: absolute;
+            right: 2%;
+            top: 35px;
+            /* font-size: 10px; */
+
+
+        }
+
+        .icon4>i {
+            font-size: 20px;
+            margin-top: 22px;
+        }
+
+        .menu {
+            display: block;
+            position: absolute;
+            left: 2%;
+            top: 55px;
+            font-size: 18px;
+        }
+
+        #logo4 {
+            display: none;
+        }
+
+
+
+    }
+</style>
+
+<body>
+    <div class="navbar">
+        <div class="menu">
+            <i class="fa-solid fa-bars" id="menu-toggle"></i>
+        </div>
+
+        <a href="index.html">
+            <h1>हिंदवी</h1>
+        </a>
+        <div class="section" id="nav-link">
+            <a href="#">कवि</a>
+            <a href="#">कविता</a>
+            <a href="#">गद्य</a>
+            <a href="#">संग्रहालय</a>
+            <a href="#">शब्दकोश</a>
+            <a href="#"> हाशिया</a>
+
+
+
+        </div>
+
+        <div class="therd-nav">
+            <i class="fa-solid fa-magnifying-glass logo"></i>
+            <input class="input" type="text" placeholder="खोजिये">
+            <i class="fa-solid fa-microphone logo2"></i>
+
+        </div>
+        <div class="nav-box">
+            <h3>लॉग इन</h3>
+        </div>
+
+        <div class="icon4">
+            <i class="fa-solid fa-qrcode  "></i>
+            <i class="fa-brands fa-facebook " id="logo4"></i>
+            <i class="fa-brands fa-twitter " id="logo4"></i>
+            <i class="fa-brands fa-instagram  " id="logo4"></i>
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+    <div class="flex">
+        <div class="box">
+            <h1>सतपुड़ा के जंगल</h1>
+            <p>
+
+                सतपुड़ा के घने जंगल 
+
+                नींद में डूबे हुए-से, 
+                
+                ऊँघते अनमने जंगल। 
+                
+                झाड़ ऊँचे और नीचे 
+                
+                चुप खड़े हैं आँख भींचे; 
+                
+                घास चुप है, काश चुप है 
+                
+                मूक शाल, पलाश चुप है; 
+                
+                बन सके तो धँसो इनमें, 
+                
+                धँस न पाती हवा जिनमें, 
+                
+                सतपुड़ा के घने जंगल 
+                
+                नींद में डूबे हुए-से 
+                
+                ऊँघते अनमने जंगल।  <br>
+                
+                सड़े पत्ते, गले पत्ते, 
+                
+                हरे पत्ते, जले पत्ते, 
+                
+                वन्य पथ को ढँक रहे-से 
+                
+                पंक दल में पले पत्ते, 
+                
+                चलो इन पर चल सको तो, 
+                
+                दलो इनको दल सको तो, 
+                
+                ये घिनौने-घने जंगल, 
+                
+                नींद में डूबे हुए-से 
+                
+                ऊँघते अनमने जंगल। 
+                
+                अटपटी उलझी लताएँ, 
+                
+                डालियों को खींच खाएँ, 
+                
+                पैरों को पकड़ें अचानक, 
+                
+                प्राण को कस लें कपाएँ, 
+                
+                साँप-सी काली लताएँ 
+                
+                बला की पाली लताएँ,  <br>
+                
+                लताओं के बने जंगल, 
+                
+                नींद में डूबे हुए-से 
+                
+                ऊँघते अनमने जंगल। 
+                
+                मकड़ियों के जाल मुँह पर, 
+                
+                और सिर के बाल मुँह पर, 
+                
+                मच्छरों के दंश वाले, 
+                
+                दाग़ काले-लाल मुँह पर, 
+                
+                बात झंझा वहन करते, 
+                
+                चलो इतना सहन करते, 
+                
+                कष्ट से ये सने जंगल, 
+                
+                नींद मे डूबे हुए-से <br>
+                
+                ऊँघते अनमने जंगल। 
+                
+                अजगरों से भरे जंगल 
+                
+                अगम, गति से परे जंगल, 
+                
+                सात-सात पहाड़ वाले, 
+                
+                बड़े-छोटे झाड़ वाले, 
+                
+                शेर वाले बाघ वाले, 
+                
+                गरज और दहाड़ वाले, 
+                
+                कंप से कनकने जंगल, 
+                
+                नींद मे डूबे हुए-से 
+                
+                ऊँघते अनमने जंगल। 
+                
+                इन वनों के ख़ूब भीतर, 
+                
+                चार मुर्ग़े, चार तीतर, 
+                
+                पाल कर निश्चिंत बैठे, 
+                
+                विजन वन के बीच बैठे,  <br>
+                
+                झोंपड़ी पर फूस डाले 
+                
+                गोंड तगड़े और काले 
+                
+                जब कि होली पास आती, 
+                
+                सरसराती घास गाती, 
+                
+                और महुए से लपकती, 
+                
+                मत्त करती बास आती, 
+                
+                गूँज उठते ढोल इनके,  <br>
+                
+                गीत इनके गोल इनके। 
+                
+                सतपुड़ा के घने जंगल 
+                
+                नींद मे डूबे हुए-से 
+                
+                ऊँघते अनमने जंगल। 
+                
+                जगते अँगड़ाइयों में, 
+                
+                खोह खड्डों खाइयों में 
+                
+                घास पागल, काश पागल, 
+                
+                शाल और पलाश पागल, 
+                
+                लता पागल, वात पागल, 
+                
+                डाल पागल, पात पागल, 
+                
+                मत्त मुर्ग़े और तीतर, 
+                
+                इन वनों के ख़ूब भीतर। 
+                
+                क्षितिज तक फैला हुआ-सा, 
+                
+                मृत्यु तक मैला हुआ-सा 
+                
+                क्षुब्ध काली लहर वाला, 
+                
+                मथित, उत्थित ज़हर वाला, 
+                
+                मेरु वाला, शेष वाला, 
+                
+                शंभु और सुरेश वाला, 
+                
+                एक सागर जानते हो? 
+                
+                ठीक वैसे घने जंगल, 
+                
+                नींद मे डूबे हुए-से 
+                
+                ऊँघते अनमने जंगल। 
+                
+                धँसो इनमें डर नहीं है, 
+                
+                मौत का यह घर नहीं है, 
+                
+                उतर कर बहते अनेकों,  <br>
+                
+                कल-कथा कहते अनेकों, 
+                
+                नदी, निर्झर और नाले, 
+                
+                इन वनों ने गोद पाले, 
+                
+                लाख पंछी, सौ हिरन-दल, 
+                
+                चाँद के कितने किरन दल, 
+                
+                झूमते बनफूल, फलियाँ, 
+                
+                खिल रहीं अज्ञात कलियाँ, 
+                
+                हरित दूर्वा, रक्त किसलय, 
+                
+                पूत, पावन, पूर्ण रसमय, 
+                
+                सतपुड़ा के घने जंगल 
+                
+                लताओं के बने जंगल। 
+            </p>
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <div class="footer-parent">
+        <div class="child-footer">
+            <h1>न्यूज़लेटर के लिए साइन अप करें</h1>
+            <h6>आपको नियमित अपडेट भेजने के अलावा अन्य किसी भी उद्देश्य के लिए आपके ई-मेल <br> का उपयोग नहीं किया जाएगा।
+            </h6>
+        </div>
+        <div class="child-footer">
+            <input type="text" placeholder="ईमेल" class="plac">
+            <input type="checkbox" class="checkbox">
+            <div class="text">
+                <h6 class="h666"> मैंने <span class="sp">रेख़्ता फ़ाउंडेशन</span> की <span class="sp">गोपनीयता नीति</span>
+                    पढ़ ली है और इससे सहमत हूँ। </h6>
+            </div>
+            <div class="box-plac">
+                <h4>सब्सक्राइब </h4>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="last-fotter">
+        <div class="child-foot">
+            <h3 id="id1">रचना-निधि </h3>
+
+            <ul>
+
+                <li class="lt">
+                    कवि <br>1369
+
+                </li>
+
+                <li class="car">
+                    कविता <br>15293
+                </li>
+
+                <li class="lt">
+                    पद <br> 1358
+                </li>
+
+                <li class="lt">
+                    दोहा <br>3025
+                </li>
+
+                <li class="lt">
+                    लोकगीत <br> 394
+                </li>
+            </ul>
+
+            <h3 id="id2"> जानकारी </h3>
+            <ul>
+                <li>
+                    साइट : परिचय
+
+                </li>
+
+                <li>
+                    संस्थापक : परिचय
+                </li>
+
+                <li>
+                    रेख़्ता फ़ाउंडेशन : परिचय
+                </li>
+
+                <li>
+                    संपर्क कीजिए
+                </li>
+
+                <li>
+                    करियर
+                </li>
+
+
+                <li>
+
+                    सहयोग
+                </li>
+            </ul>
+
+            <h3 id="id3"> वेबसाइट्स</h3>
+            <ul>
+                <li class="rd3">
+                    रेख़्ता
+
+                </li>
+
+                <li class="rd3">
+                    सूफ़ीनामा
+                </li>
+
+                <li class="rd3">
+                    रेख़्ता डिक्शनरी
+                </li>
+
+                <li class="rd3">
+                    हिन्दवी डिक्शनरी
+                </li>
+
+                <li class="rd3">
+                    हिन्दवी डिक्शनरी
+                </li>
+
+
+
+            </ul>
+
+            <h3 id="id3" class="t6"> जानकारी </h3>
+
+            <!-- <div class="box4"></div> -->
+        </div>
+
+        <div id="btn">
+            <h6>संपर्क कीजिए</h6>
+        </div>
+
+    </div>
+
+    <div class="input3">
+        <input type="text" placeholder="नाम" class="inp">
+        <input type="text" placeholder="ईमेल" class="inp1">
+        <input type="text" placeholder="संदेश" class="inp2">
+
+    </div>
+
+    <div class="btn3">
+        <h3>भेजिए</h3>
+    </div>
+
+
+    <script>
+
+        const toogle = document.getElementById('menu-toggle')
+        const navlink = document.getElementById('nav-link')
+        toogle.addEventListener('click', () => {
+            navlink.classList.toggle('active');
+        })
+    </script>
+
+</body>
+
+</html>

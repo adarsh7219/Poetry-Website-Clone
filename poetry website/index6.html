@@ -1,0 +1,1634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="shortcut icon" href="https://tse3.mm.bing.net/th?id=OIP.dPWv7mUoq5uNcXcPVUkDYwHaHa&pid=Api&P=0&h=220" type="image/x-icon">
+    <title>POETRY</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .navbar {
+        height: 80px;
+        width: 100%;
+        background-color: #fdf8ee;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .navbar>a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .section {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        /* justify-content: space-between; */
+        padding: 0 10px;
+    }
+
+    .section>a {
+        text-decoration: none;
+        padding-left: 10px;
+        color: black;
+        font-weight: 600;
+    }
+
+    .therd-nav {
+        min-width: 400px;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 3px;
+    }
+
+    .input {
+        width: 94%;
+        height: 100%;
+        padding: 10px;
+        border: none;
+        background-color: #fdf8ee;
+        /* border: 1px solid black; */
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        border-top-left-radius: none;
+    }
+
+    .input:hover {
+        /* background-color: #fdf8ee; */
+
+    }
+
+    .logo {
+        font-size: 20px;
+        padding: 8px;
+        background-color: #fdf8ee;
+        /* border: 1px solid black; */
+
+        /* border-radius: 2px ; */
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        /* border-top-right-radius: 2px; */
+        /* border-bottom-right-radius: 2px; */
+        cursor: pointer;
+    }
+
+    .logo2 {
+        font-size: 20px;
+        padding: 8px;
+        /* border: 1px solid black; */
+
+
+    }
+
+    .nav-box {
+        height: 60px;
+        width: 160px;
+        border: 2px solid black;
+        background-color: #fdf8ee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+
+    .nav-box:hover {
+        color: white;
+        background-color: rgb(102, 50, 12);
+
+
+    }
+
+    .icon4 {
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    .icon4>i {
+        margin-left: 17px;
+        font-size: 24px;
+    }
+
+    .icon4>i:hover {
+        color: blue;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .flex {
+
+        display: flex;
+    }
+
+    .box {
+        /* height: ; */
+        width: 100%;
+        background-color: rgb(142, 207, 209);
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .box>h1 {
+        color: #aa5128;
+    }
+
+    .box>p {
+        position: relative;
+        top: 3px;
+        font-size: 13px;
+    }
+
+
+    /* footer  */
+
+
+    .footer-parent {
+        height: 300px;
+        /* width: 100vw; */
+        background-color: #FFF4E6;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        /* top: 300px; */
+
+    }
+
+    .child-footer {
+        height: 200px;
+        width: 50%;
+        background-color: #FFF4E6;
+        border: 1px solid black;
+        /* text-align: center; */
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        top: 30px;
+
+    }
+
+    .child-footer>h6 {
+        position: relative;
+        top: 15px;
+        color: #93573B;
+    }
+
+    .child-footer>h1 {
+        color: #93573B;
+    }
+
+    .plac {
+        width: 400px;
+        height: 40px;
+    }
+
+    .box-plac {
+        height: 40px;
+        width: 100px;
+        /* border: 2px solid black; */
+        position: relative;
+        left: 249px;
+        bottom: 40px;
+        text-align: center;
+        cursor: pointer;
+        background-color: rgb(102, 50, 12);
+        color: white;
+
+
+    }
+
+    .box-plac>h4 {
+        position: relative;
+        top: 7px;
+
+    }
+
+    .checkbox {
+        position: absolute;
+        top: 110px;
+        left: 180px;
+        font-size: 60px;
+
+    }
+
+    .sp {
+        color: blue;
+    }
+
+    .text {
+        position: absolute;
+        top: 110px;
+        cursor: pointer;
+    }
+
+
+    /* last footer  */
+
+    .last-fotter {
+        height: 430px;
+        background-color: #FFF4E6;
+        text-align: center;
+    }
+
+    .child-foot {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .child-foot>h3 {
+        position: relative;
+        bottom: 30px;
+    }
+
+    .child-foot>ul>li {
+        list-style-type: none;
+        position: relative;
+        top: 60px;
+        margin-top: 15px;
+        /* right: 200px; */
+        color: #93573B;
+        text-align: center;
+    }
+
+    .child-foot>ul {
+        position: relative;
+        top: 20px;
+    }
+
+    .span1 {
+        position: relative;
+        left: 40px;
+    }
+
+
+    .span2 {
+        position: relative;
+        left: 40px;
+    }
+
+    .span3 {
+        position: relative;
+        left: 50px;
+    }
+
+    .span4 {
+        position: relative;
+        left: 40px;
+    }
+
+    .span5 {
+        position: relative;
+        left: 23px;
+    }
+
+    .box4 {
+        height: 50px;
+        width: 50%;
+        background-color: aqua;
+    }
+
+    /* footer resposive  */
+
+    #id1 {
+        position: relative;
+        margin-bottom: 30px;
+        bottom: 30px;
+        left: 70px;
+
+        /* right: 200px; */
+        color: #93573B;
+        margin-left: 50px;
+    }
+
+    #id2 {
+        position: relative;
+        bottom: 43px;
+        left: 100px;
+        color: #93573B;
+
+
+
+    }
+
+    #id3 {
+
+        position: relative;
+        bottom: 43px;
+        margin-right: 10px;
+        /* margin-bottom: 30px; */
+        left: 100px;
+        font-weight: 700;
+        color: #93573B;
+    }
+
+    .rd3 {
+        position: relative;
+        bottom: 30px;
+        margin-bottom: 16px;
+    }
+
+
+    .input3 {
+        /* width: 100%; */
+        position: absolute;
+        right: 80px;
+        top: 900px;
+
+    }
+
+
+    .inp {
+        width: 300px;
+        height: 40px;
+        position: absolute;
+        right: 5px;
+        top: 400px;
+    }
+
+    .inp1 {
+        width: 300px;
+        height: 40px;
+        position: absolute;
+        right: 5px;
+        top: 470px;
+
+    }
+
+    .inp2 {
+
+        width: 300px;
+        height: 120px;
+        position: absolute;
+        right: 5px;
+        top: 540px;
+
+
+    }
+
+    #btn {
+        height: 50px;
+        width: 170px;
+        /* border: 2px solid black; */
+        background-color: #FFF4E6;
+        display: none;
+    }
+
+
+
+    @media (min-width:320px) and (max-width:1300px) {
+        .input3 {
+            display: none;
+
+        }
+
+        .t6 {
+            display: none;
+        }
+
+        .box {
+            background-color: white;
+        }
+
+
+
+    }
+
+
+    @media (min-width:320px) and (max-width:1300px) {
+
+        .footer-parent {
+            /* height: 50%; */
+            width: 100%;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* margin-top: 400px; */
+        }
+
+        .child-footer {
+            width: 100%;
+
+        }
+
+
+        .child-footer>h1 {
+            font-size: 20px;
+
+        }
+
+        .child-footer>h6 {
+            text-align: center;
+        }
+
+        .plac {
+            width: 255px;
+            height: 40px;
+            position: absolute;
+            left: 0;
+        }
+
+        .box-plac {
+            position: relative;
+            left: 127px;
+            top: 0px;
+            width: 100px;
+        }
+
+        .checkbox {
+            left: 0;
+        }
+
+        .last-fotter {
+            width: 100%;
+            margin-top: 30px;
+            position: absolute;
+        }
+
+        .child-foot {
+            /* flex-direction: column; */
+            /* position: absolute; */
+
+        }
+
+        #id1 {
+            position: relative;
+            margin-top: 10px;
+            font-size: 10px;
+            margin-bottom: 45px;
+            left: 1px;
+            font-weight: 700;
+            color: black;
+            width: 60px;
+            /* text-align: center; */
+
+        }
+
+        .child-foot>ul>li {
+            position: relative;
+            top: 45px;
+            font-size: 9px;
+            font-weight: 700;
+            text-align: center;
+
+        }
+
+        .text {
+            position: absolute;
+            left: 20px;
+        }
+
+        .box-plac {
+            position: absolute;
+            left: 257px;
+            top: 55px;
+        }
+
+
+
+
+
+        .span1 {
+            position: relative;
+            left: 30px;
+
+
+        }
+
+        .span2 {
+            position: relative;
+            left: 35px;
+            bottom: 10px;
+        }
+
+        .span4 {
+            position: relative;
+            left: 26px;
+        }
+
+        .span5 {
+            position: relative;
+            left: 40px;
+            bottom: 10px;
+        }
+
+        .span3 {
+            position: relative;
+            left: 30px;
+
+        }
+
+
+        #id2 {
+            position: relative;
+            left: 65px;
+            font-size: 10px;
+            /* margin-bottom: 30px; */
+            bottom: 50px;
+            color: black;
+
+        }
+
+        #id3 {
+            position: relative;
+            left: 48px;
+            font-size: 10px;
+            margin-bottom: 26px;
+            font-weight: 700;
+            color: black;
+        }
+
+        .child-foot>ul {
+            position: relative;
+            margin-bottom: 35px;
+        }
+
+        .rd3 {
+            position: relative;
+            right: 15px;
+        }
+
+        #btn {
+            width: 100%;
+            background-color: #93573B;
+            position: relative;
+            top: 50px;
+            /* left: 100px; */
+            border-radius: 10px;
+            display: block;
+            /* text-align: center; */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .last-fotter {
+            height: 60%;
+        }
+
+        .lt {
+            position: relative;
+            right: 56px;
+        }
+
+        .car {
+            position: relative;
+            right: 56px;
+            /* font-size: 13px; */
+            /* font-weight: 700; */
+        }
+
+    }
+
+
+
+    .btn3 {
+        height: 50px;
+        width: 100%;
+        background-color: #93573B;
+        border: 2px solid black;
+        position: absolute;
+        top: 1600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+
+    .btn3:hover {
+        background-color: #aa5128;
+    }
+
+
+
+
+
+    @media (min-width:320px) and (max-width:1300px) {
+
+        .btn3 {
+            display: none;
+        }
+
+        .box2>h1 {
+            position: relative;
+            top: 180px;
+        }
+
+
+        .meed-section {
+            height: 220px;
+            width: 100%;
+        }
+
+        .meed-section>h1 {
+            text-align: center;
+
+
+
+        }
+
+        .meed-section>h3 {
+            text-align: center;
+
+
+        }
+
+        .kavi {
+            text-align: center;
+            /* margin-top: 10px; */
+            /* margin-bottom: 20px; */
+            position: relative;
+            top: 5px;
+        }
+
+        .smol-box {
+            height: 40px;
+            width: 40px;
+            position: absolute;
+            top: 354px;
+
+        }
+
+        .box1 {
+            position: relative;
+            bottom: 20px;
+        }
+
+    }
+
+    @media (min-width:320px) and (max-width:1300px) {
+
+        .box {
+            width: 100%;
+        }
+    }
+
+
+
+
+
+
+
+    @media (min-width:320px) and (max-width:1300px) {
+
+        .navbar {
+            width: 100%;
+            height: 120px;
+        }
+
+        .section {
+
+            width: 100%;
+            height: 60%;
+            position: absolute;
+            flex-direction: column;
+            background-color: white;
+            /* position: relative; */
+            left: -100%;
+            top: 0;
+            z-index: 100;
+            padding-block: 20px;
+            transition: 0.2s ease-in-out;
+
+
+        }
+
+        /* .section>a{
+        text-align: center;
+        position: relative;
+        top: 50px;
+        
+        
+    } */
+
+        .section.active {
+            left: 0;
+        }
+
+        .section>a {
+
+            margin-top: 10px;
+            /* flex-direction: column; */
+
+
+        }
+
+        .menu {
+            z-index: 1500;
+        }
+
+        .navbar>a {
+            font-size: 10px;
+            position: absolute;
+            top: 8px;
+
+        }
+
+        .therd-nav {
+            min-width: 300px;
+            position: relative;
+            top: 10px;
+        }
+
+        .loader>h1 {
+            font-size: 50px;
+            text-align: center;
+        }
+
+        .nav-box {
+            display: none;
+        }
+
+        .icon4 {
+            display: block;
+            position: absolute;
+            right: 2%;
+            top: 35px;
+            /* font-size: 10px; */
+
+
+        }
+
+        .icon4>i {
+            font-size: 20px;
+            margin-top: 22px;
+        }
+
+        .menu {
+            display: block;
+            position: absolute;
+            left: 2%;
+            top: 55px;
+            font-size: 18px;
+        }
+
+        #logo4 {
+            display: none;
+        }
+
+
+
+    }
+</style>
+
+<body>
+    <div class="navbar">
+        <div class="menu">
+            <i class="fa-solid fa-bars" id="menu-toggle"></i>
+        </div>
+
+        <a href="index.html">
+            <h1>हिंदवी</h1>
+        </a>
+        <div class="section" id="nav-link">
+            <a href="#">कवि</a>
+            <a href="#">कविता</a>
+            <a href="#">गद्य</a>
+            <a href="#">संग्रहालय</a>
+            <a href="#">शब्दकोश</a>
+            <a href="#"> हाशिया</a>
+
+
+
+        </div>
+
+        <div class="therd-nav">
+            <i class="fa-solid fa-magnifying-glass logo"></i>
+            <input class="input" type="text" placeholder="खोजिये">
+            <i class="fa-solid fa-microphone logo2"></i>
+
+        </div>
+        <div class="nav-box">
+            <h3>लॉग इन</h3>
+        </div>
+
+        <div class="icon4">
+            <i class="fa-solid fa-qrcode  "></i>
+            <i class="fa-brands fa-facebook " id="logo4"></i>
+            <i class="fa-brands fa-twitter " id="logo4"></i>
+            <i class="fa-brands fa-instagram  " id="logo4"></i>
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+    <div class="flex">
+        <div class="box">
+            <h1>राम की शक्ति-पूजा</h1>
+            <p>
+                रवि हुआ अस्त : ज्योति के पत्र पर लिखा अमर
+
+                रह गया राम-रावण का अपराजेय समर
+
+                आज का, तीक्ष्ण-शर-विधृत-क्षिप्र-कर वेग-प्रखर,
+
+                शतशेलसंवरणशील, नीलनभ-गर्ज्जित-स्वर,
+
+                प्रतिपल-परिवर्तित-व्यूह-भेद-कौशल-समूह,—
+
+                राक्षस-विरुद्ध प्रत्यूह,—क्रुद्ध-कपि-विषम—हूह,
+
+                विच्छुरितवह्नि—राजीवनयन-हत-लक्ष्य-बाण,
+
+                लोहितलोचन-रावण-मदमोचन-महीयान,
+
+                राघव-लाघव-रावण-वारण—गत-युग्म-प्रहर,
+
+                उद्धत-लंकापति-मर्दित-कपि-दल-बल-विस्तर,
+
+                अनिमेष-राम-विश्वजिद्दिव्य-शर-भंग-भाव,—
+
+                विद्धांग-बद्ध-कोदंड-मुष्टि—खर-रुधिर-स्राव,
+
+                रावण-प्रहार-दुर्वार-विकल-वानर दल-बल,—
+
+                मूर्च्छित-सुग्रीवांगद-भीषण-गवाक्ष-गय-नल,
+
+                वारित-सौमित्र-भल्लपति—अगणित-मल्ल-रोध,
+
+                गर्ज्जित-प्रलयाब्धि—क्षुब्ध—हनुमत्-केवल-प्रबोध,
+
+                उद्गीरित-वह्नि-भीम-पर्वत-कपि-चतुः प्रहर,
+
+                जानकी-भीरु-उर—आशाभर—रावण-सम्वर।
+
+                लौटे युग-दल। राक्षस-पदतल पृथ्वी टलमल,
+
+                बिंध महोल्लास से बार-बार आकाश विकल।
+
+                वानर-वाहिनी खिन्न, लख निज-पति-चरण-चिह्न
+
+                चल रही शिविर की ओर स्थविर-दल ज्यों विभिन्न;
+
+                प्रशमित है वातावरण; नमित-मुख सांध्य कमल
+
+                लक्ष्मण चिंता-पल, पीछे वानर-वीर सकल;
+
+                रघुनायक आगे अवनी पर नवनीत-चरण,
+
+                श्लथ धनु-गुण है कटिबंध स्रस्त—तूणीर-धरण,
+
+                दृढ़ जटा-मुकुट हो विपर्यस्त प्रतिलट से खुल
+
+                फैला पृष्ठ पर, बाहुओं पर, वक्ष पर, विपुल
+
+                उतरा ज्यों दुर्गम पर्वत पर नैशांधकार,
+
+                चमकती दूर ताराएँ ज्यों हों कहीं पार।
+
+                आए सब शिविर, सानु पर पर्वत के, मंथर,
+
+                सुग्रीव, विभीषण, जांबवान आदिक वानर,
+
+                सेनापति दल-विशेष के, अंगद, हनुमान
+
+                नल, नील, गवाक्ष, प्रात के रण का समाधान
+
+                करने के लिए, फेर वानर-दल आश्रय-स्थल।
+
+                बैठे रघु-कुल-मणि श्वेत शिला पर; निर्मल जल
+
+                ले आए कर-पद-क्षालनार्थ पटु हनुमान;
+
+                अन्य वीर सर के गए तीर संध्या-विधान—
+
+                वंदना ईश की करने को, लौटे सत्वर,
+
+                सब घेर राम को बैठे आज्ञा को तत्पर।
+
+                पीछे लक्ष्मण, सामने विभीषण, भल्लधीर,
+
+                सुग्रीव, प्रांत पर पाद-पद्म के महावीर;
+
+                यूथपति अन्य जो, यथास्थान, हो निर्निमेष
+
+                देखते राम का जित-सरोज-मुख-श्याम-देश।
+
+                है अमानिशा; उगलता गगन घन अंधकार;
+
+                खो रहा दिशा का ज्ञान; स्तब्ध है पवन-चार;
+
+                अप्रतिहत गरज रहा पीछे अंबुधि विशाल;
+
+                भूधर ज्यों ध्यान-मग्न; केवल जलती मशाल।
+
+                स्थिर राघवेंद्र को हिला रहा फिर-फिर संशय,
+
+                रह-रह उठता जग जीवन में रावण-जय-भय;
+
+                जो नहीं हुआ आज तक हृदय रिपु-दम्य-श्रांत,—
+
+                एक भी, अयुत-लक्ष में रहा जो दुराक्रांत,
+
+                कल लड़ने को हो रहा विकल वह बार-बार,
+
+                असमर्थ मानता मन उद्यत हो हार-हार।
+
+                ऐसे क्षण अंधकार घन में जैसे विद्युत
+
+                जागी पृथ्वी-तनया-कुमारिका-छवि, अच्युत
+
+                देखते हुए निष्पलक, याद आया उपवन
+
+                विदेह का,—प्रथम स्नेह का लतांतराल मिलन
+
+                नयनों का—नयनों से गोपन—प्रिय संभाषण,
+
+                पलकों का नव पलकों पर प्रथमोत्थान-पतन,
+
+                काँपते हुए किसलय,—झरते पराग-समुदय,
+
+                गाते खग-नव-जीवन-परिचय,—तरु मलय—वलय,
+
+                ज्योति प्रपात स्वर्गीय,—ज्ञात छवि प्रथम स्वीय,
+
+                जानकी—नयन—कमनीय प्रथम कम्पन तुरीय।
+
+                सिहरा तन, क्षण-भर भूला मन, लहरा समस्त,
+
+                हर धनुर्भंग को पुनर्वार ज्यों उठा हस्त,
+
+                फूटी स्मिति सीता-ध्यान-लीन राम के अधर,
+
+                फिर विश्व-विजय-भावना हृदय में आई भर,
+
+                वे आए याद दिव्य शर अगणित मंत्रपूत,—
+
+                फड़का पर नभ को उड़े सकल ज्यों देवदूत,
+
+                देखते राम, जल रहे शलभ ज्यों रजनीचर,
+
+                ताड़का, सुबाहु, विराध, शिरस्त्रय, दूषण, खर;
+
+                फिर देखी भीमा मूर्ति आज रण देखी जो
+
+                आच्छादित किए हुए सम्मुख समग्र नभ को,
+
+                ज्योतिर्मय अस्त्र सकल बुझ-बुझकर हुए क्षीण,
+
+                पा महानिलय उस तन में क्षण में हुए लीन,
+
+                लख शंकाकुल हो गए अतुल-बल शेष-शयन,—
+
+                खिंच गए दृगों में सीता के राममय नयन;
+
+                फिर सुना—हँस रहा अट्टहास रावण खलखल,
+
+                भावित नयनों से सजल गिरे दो मुक्ता-दल।
+
+                बैठे मारुति देखते राम—चरणारविंद
+
+                युग ‘अस्ति-नास्ति' के एक-रूप, गुण-गण—अनिंद्य;
+
+                साधना-मध्य भी साम्य—वाम-कर दक्षिण-पद,
+
+                दक्षिण-कर-तल पर वाम चरण, कपिवर गद्-गद्
+
+                पा सत्य, सच्चिदानंदरूप, विश्राम-धाम,
+
+                जपते सभक्ति अजपा विभक्त हो राम-नाम।
+
+                युग चरणों पर आ पड़े अस्तु वे अश्रु युगल,
+
+                देखा कपि ने, चमके नभ में ज्यों तारादल;
+
+                ये नहीं चरण राम के, बने श्यामा के शुभ,—
+
+                सोहते मध्य में हीरक युग या दो कौस्तुभ;
+
+                टूटा वह तार ध्यान का, स्थिर मन हुआ विकल,
+
+                संदिग्ध भाव की उठी दृष्टि, देखा अविकल
+
+                बैठे वे वही कमल-लोचन, पर सजल नयन,
+
+                व्याकुल-व्याकुल कुछ चिर-प्रफुल्ल मुख, निश्चेतन।
+
+                'ये अश्रु राम के' आते ही मन में विचार,
+
+                उद्वेल हो उठा शक्ति-खेल-सागर अपार,
+
+                हो श्वसित पवन-उनचास, पिता-पक्ष से तुमुल,
+
+                एकत्र वक्ष पर बहा वाष्प को उड़ा अतुल,
+
+                शत घूर्णावर्त, तरंग-भंग उठते पहाड़,
+
+                जल राशि-राशि जल पर चढ़ता खाता पछाड़
+
+                तोड़ता बंध—प्रतिसंध धरा, हो स्फीत-वक्ष
+
+                दिग्विजय-अर्थ प्रतिपल समर्थ बढ़ता समक्ष।
+
+                शत-वायु-वेग-बल, डुबा अतल में देश-भाव,
+
+                जलराशि विपुल मथ मिला अनिल में महाराव
+
+                वज्रांग तेजघन बना पवन को, महाकाश
+
+                पहुँचा, एकादशरुद्र क्षुब्ध कर अट्टहास।
+
+                रावण-महिमा श्मामा विभावरी-अंधकार,
+
+                यह रुद्र राम-पूजन-प्रताप तेजःप्रसार;
+
+                उस ओर शक्ति शिव की जो दशस्कंध-पूजित,
+
+                इस ओर रुद्र-वंदन जो रघुनंदन-कूजित;
+
+                करने को ग्रस्त समस्त व्योम कपि बढ़ा अटल,
+
+                लख महानाश शिव अचल हुए क्षण-भर चंचल,
+
+                श्यामा के पदतल भारधरण हर मंद्रस्वर
+
+                बोले—“संबरो देवि, निज तेज, नहीं वानर
+
+                यह,—नहीं हुआ शृंगार-युग्म-गत, महावीर,
+
+                अर्चना राम की मूर्तिमान अक्षय-शरीर,
+
+                चिर-ब्रह्मचर्य-रत, ये एकादश रुद्र धन्य,
+
+                मर्यादा-पुरुषोत्तम के सर्वोत्तम, अनन्य
+
+                लीलासहचर, दिव्यभावधर, इन पर प्रहार
+
+                करने पर होगी देवि, तुम्हारी विषम हार;
+
+                विद्या का ले आश्रय इस मन को दो प्रबोध,
+
+                झुक जाएगा कपि, निश्चय होगा दूर रोध।
+
+                कह हुए मौन शिव; पवन-तनय में भर विस्मय
+
+                सहसा नभ में अंजना-रूप का हुआ उदय;
+
+                बोली माता—“तुमने रवि को जब लिया निगल
+
+                तब नहीं बोध था तुम्हें, रहे बालक केवल;
+
+                यह वही भाव कर रहा तुम्हें व्याकुल रह-रह,
+
+                यह लज्जा की है बात कि माँ रहती सह-सह;
+
+                यह महाकाश, है जहाँ वास शिव का निर्मल—
+
+                पूजते जिन्हें श्रीराम, उसे ग्रसने को चल
+
+                क्या नहीं कर रहे तुम अनर्थ?—सोचो मन में;
+
+                क्या दी आज्ञा ऐसी कुछ श्रीरघुनंदन ने?
+
+                तुम सेवक हो, छोड़कर धर्म कर रहे कार्य—
+
+                क्या असंभाव्य हो यह राघव के लिए धार्य?
+
+                कपि हुए नम्र, क्षण में माताछवि हुई लीन,
+
+                उतरे धीरे-धीरे, गह प्रभु-पद हुए दीन।
+
+                राम का विषण्णानन देखते हुए कुछ क्षण,
+
+                ''हे सखा'', विभीषण बोले, “आज प्रसन्न वदन
+
+                वह नहीं, देखकर जिसे समग्र वीर वानर—
+
+                भल्लूक विगत-श्रम हो पाते जीवन—निर्जर;
+
+                रघुवीर, तीर सब वही तूण में हैं रक्षित,
+
+                है वही वक्ष, रण-कुशल हस्त, बल वही अमित,
+
+                हैं वही सुमित्रानंदन मेघनाद-जित-रण,
+
+                हैं वही भल्लपति, वानरेंद्र सुग्रीव प्रमन,
+
+                तारा-कुमार भी वही महाबल श्वेत धीर,
+
+                अप्रतिभट वही एक—अर्बुद-सम, महावीर,
+
+                है वही दक्ष सेना-नायक, है वही समर,
+
+                फिर कैसे असमय हुआ उदय यह भाव-प्रहर?
+
+                रघुकुल गौरव, लघु हुए जा रहे तुम इस क्षण,
+
+                तुम फेर रहे हो पीठ हो रहा जब जय रण!
+
+                कितना श्रम हुआ व्यर्थ! आया जब मिलन-समय,
+
+                तुम खींच रहे हो हस्त जानकी से निर्दय!
+
+                रावण, रावण, लंपट, खल, कल्मष-गताचार,
+
+                जिसने हित कहते किया मुझे पाद-प्रहार,
+
+                बैठा उपवन में देगा दु:ख सीता को फिर,—
+
+                कहता रण की जय-कथा पारिषद-दल से घिर;—
+
+                सुनता वसंत में उपवन में कल-कूजित पिक
+
+                मैं बना किंतु लंकापति, धिक्, राघव, धिक् धिक्!
+
+                सब सभा रही निस्तब्ध : राम के स्तिमित नयन
+
+                छोड़ते हुए, शीतल प्रकाश देखते विमन,
+
+                जैसे ओजस्वी शब्दों का जो था प्रभाव
+
+                उससे न इन्हें कुछ चाव, न हो कोई दुराव;
+
+                ज्यों हों वे शब्द मात्र,—मैत्री की समनुरक्ति,
+
+                पर जहाँ गहन भाव के ग्रहण की नहीं शक्ति।
+
+                कुछ क्षण तक रहकर मौन सहज निज कोमल स्वर
+
+                बोले रघुमणि—मित्रवर, विजय होगी न समर;
+
+                यह नहीं रहा नर-वानर का राक्षस से रण,
+
+                उतरीं पा महाशक्ति रावण से आमंत्रण;
+
+                अन्याय जिधर, हैं उधर शक्ति! कहते छल-छल
+
+                हो गए नयन, कुछ बूँद पुनः ढलके दृगजल,
+
+                रुक गया कंठ, चमका लक्ष्मण-तेजः प्रचंड,
+
+                धँस गया धरा में कपि गह युग पद मसक दंड,
+
+                स्थिर जांबवान,—समझते हुए ज्यों सकल भाव,
+
+                व्याकुल सुग्रीव,—हुआ उर में ज्यों विषम घाव,
+
+                निश्चित-सा करते हुए विभीषण कार्य-क्रम,
+
+                मौन में रहा यों स्पंदित वातावरण विषम।
+
+                निज सहज रूप में संयत हो जानकी-प्राण
+
+                बोले—“आया न समझ में यह दैवी विधान;
+
+                रावण, अधर्मरत भी, अपना, मैं हुआ अपर—
+
+                यह रहा शक्ति का खेल समर, शंकर, शंकर!
+
+                करता मैं योजित बार-बार शर-निकर निशित
+
+                हो सकती जिनसे यह संसृति संपूर्ण विजित,
+
+                जो तेजःपुंज, सृष्टि की रक्षा का विचार
+
+                है जिनमें निहित पतनघातक संस्कृति अपार—
+
+                शत-शुद्धि-बोध—सूक्ष्मातिसूक्ष्म मन का विवेक,
+
+                जिनमें है क्षात्रधर्म का धृत पूर्णाभिषेक,
+
+                जो हुए प्रजापतियों से संयम से रक्षित,
+
+                वे शर हो गए आज रण में श्रीहत, खंडित!
+
+                देखा, हैं महाशक्ति रावण को लिए अंक,
+
+                लांछन को ले जैसे शशांक नभ में अशंक;
+
+                हत मंत्रपूत शर संवृत करतीं बार-बार,
+
+                निष्फल होते लक्ष्य पर क्षिप्र वार पर वार!
+
+                विचलित लख कपिदल, क्रुद्ध युद्ध को मैं ज्यों-ज्यों,
+
+                झक-झक झलकती वह्नि वामा के दृग त्यों-त्यों,
+
+                पश्चात्, देखने लगीं मुझे, बँध गए हस्त,
+
+                फिर खिंचा न धनु, मुक्त ज्यों बँधा मैं हुआ त्रस्त!
+
+                कह हुए भानुकुलभूषण वहाँ मौन क्षण-भर,
+
+                बोले विश्वस्त कंठ से जांबवान—रघुवर,
+
+                विचलित होने का नहीं देखता मैं कारण,
+
+                हे पुरुष-सिंह, तुम भी यह शक्ति करो धारण,
+
+                आराधन का दृढ़ आराधन से दो उत्तर,
+
+                तुम वरो विजय संयत प्राणों से प्राणों पर;
+
+                रावण अशुद्ध होकर भी यदि कर सका त्रस्त
+
+                तो निश्चय तुम हो सिद्ध करोगे उसे ध्वस्त,
+
+                शक्ति की करो मौलिक कल्पना, करो पूजन,
+
+                छोड़ दो समर जब तक न सिद्धि हो, रघुनंदन!
+
+                तब तक लक्ष्मण हैं महावाहिनी के नायक
+
+                मध्य भाग में, अंगद दक्षिण-श्वेत सहायक,
+
+                मैं भल्ल-सैन्य; हैं वाम पार्श्व में हनूमान,
+
+                नल, नील और छोटे कपिगण—उनके प्रधान;
+
+                सुग्रीव, विभीषण, अन्य यूथपति यथासमय
+
+                आएँगे रक्षाहेतु जहाँ भी होगा भय।”
+
+                खिल गई सभा। ‘‘उत्तम निश्चय यह, भल्लनाथ!”
+
+                कह दिया वृद्ध को मान राम ने झुका माथ।
+
+                हो गए ध्यान में लीन पुनः करते विचार,
+
+                देखते सकल-तन पुलकित होता बार-बार।
+
+                कुछ समय अनंतर इंदीवर निंदित लोचन
+
+                खुल गए, रहा निष्पलक भाव में मज्जित मन।
+
+                बोले आवेग-रहित स्वर से विश्वास-स्थित—
+
+                मातः, दशभुजा, विश्व-ज्योतिः, मैं हूँ आश्रित;
+
+                हो विद्ध शक्ति से है खल महिषासुर मर्दित,
+
+                जनरंजन-चरण-कमल-तल, धन्य सिंह गर्ज्जित!
+
+                यह, यह मेरा प्रतीक, मातः, समझा इंगित;
+
+                मैं सिंह, इसी भाव से करूँगा अभिनंदित।”
+
+                कुछ समय स्तब्ध हो रहे राम छवि में निमग्न,
+
+                फिर खोले पलक कमल-ज्योतिर्दल ध्यान-लग्न;
+
+                हैं देख रहे मंत्री, सेनापति, वीरासन
+
+                बैठे उमड़ते हुए, राघव का स्मित आनन।
+
+                बोले भावस्थ चंद्र-मुख-निंदित रामचंद्र,
+
+                प्राणों में पावन कंपन भर, स्वर मेघमंद्र—
+
+                “देखो, बंधुवर सामने स्थित जो यह भूधर
+
+                शोभित शत-हरित-गुल्म-तृण से श्यामल सुंदर,
+
+                पार्वती कल्पना हैं। इसकी, मकरंद-बिंदु;
+
+                गरजता चरण-प्रांत पर सिंह वह, नहीं सिंधु;
+
+                दशदिक-समस्त हैं हस्त, और देखो ऊपर,
+
+                अंबर में हुए दिगंबर अर्चित शशि-शेखर;
+
+                लख महाभाव-मंगल पदतल धँस रहा गर्व—
+
+                मानव के मन का असुर मंद, हो रहा खर्व’’
+
+                फिर मधुर दृष्टि से प्रिय कपि को खींचते हुए—
+
+                बोले प्रियतर स्वर से अंतर सींचते हुए
+
+                “चाहिए हमें एक सौ आठ, कपि, इंदीवर,
+
+                कम-से-कम अधिक और हों, अधिक और सुंदर,
+
+                जाओ देवीदह, उषःकाल होते सत्वर,
+
+                तोड़ो, लाओ वे कमल, लौटकर लड़ो समर।”
+
+                अवगत हो जांबवान से पथ, दूरत्व, स्थान,
+
+                प्रभु-पद-रज सिर धर चले हर्ष भर हनूमान।
+
+                राघव ने विदा किया सबको जानकर समय,
+
+                सब चले सदय राम की सोचते हुए विजय।
+
+                निशि हुई विगतः नभ के ललाट पर प्रथम किरण
+
+                फूटी, रघुनंदन के दृग महिमा-ज्योति-हिरण;
+
+                है नहीं शरासन आज हस्त-तूणीर स्कंध,
+
+                वह नहीं सोहता निविड़-जटा दृढ़ मुकुट-बंध;
+
+                सुन पड़ता सिंहनाद,—रण-कोलाहल अपार,
+
+                उमड़ता नहीं मन, स्तब्ध सुधी हैं ध्यान धार;
+
+                पूजोपरांत जपते दुर्गा, दशभुजा नाम,
+
+                मन करते हुए मनन नामों के गुणग्राम;
+
+                बीता वह दिवस, हुआ मन स्थिर इष्ट के चरण,
+
+                गहन-से-गहनतर होने लगा समाराधन।
+
+                क्रम-क्रम से हुए पार राघव के पंच दिवस,
+
+                चक्र से चक्र मन चढ़ता गया ऊर्ध्व निरलस;
+
+                कर-जप पूरा कर एक चढ़ाते इंदीवर,
+
+                निज पुरश्चरण इस भाँति रहे हैं पूरा कर।
+
+                चढ़ षष्ठ दिवस आज्ञा पर हुआ समाहित मन,
+
+                प्रति जप से खिंच-खिंच होने लगा महाकर्षण;
+
+                संचित त्रिकुटी पर ध्यान द्विदल देवी-पद पर,
+
+                जप के स्वर लगा काँपने थर-थर-थर अंबर;
+
+                दो दिन-निष्पंद एक आसन पर रहे राम,
+
+                अर्पित करते इंदीवर, जपते हुए नाम;
+
+                आठवाँ दिवस, मन ध्यान-युक्त चढ़ता ऊपर
+
+                कर गया अतिक्रम ब्रह्मा-हरि-शंकर का स्तर,
+
+                हो गया विजित ब्रह्मांड पूर्ण, देवता स्तब्ध,
+
+                हो गए दग्ध जीवन के तप के समारब्ध,
+
+                रह गया एक इंदीवर, मन देखता-पार
+
+                प्रायः करने को हुआ दुर्ग जो सहस्रार,
+
+                द्विप्रहर रात्रि, साकार हुईं दुर्गा छिपकर,
+
+                हँस उठा ले गई पूजा का प्रिय इंदीवर।
+
+                यह अंतिम जप, ध्यान में देखते चरण युगल
+
+                राम ने बढ़ाया कर लेने को नील कमल;
+
+                कुछ लगा न हाथ, हुआ सहसा स्थिर मन चंचल
+
+                ध्यान की भूमि से उतरे, खोले पलक विमल,
+
+                देखा, वह रिक्त स्थान, यह जप का पूर्ण समय
+
+                आसन छोड़ना असिद्धि, भर गए नयनद्वयः—
+
+                “धिक् जीवन को जो पाता ही आया विरोध,
+
+                धिक् साधन, जिसके लिए सदा ही किया शोध!
+
+                जानकी! हाय, उद्धार प्रिया का न हो सका।”
+
+                वह एक और मन रहा राम का जो न थका;
+
+                जो नहीं जानता दैन्य, नहीं जानता विनय
+
+                कर गया भेद वह मायावरण प्राप्त कर जय,
+
+                बुद्धि के दुर्ग पहुँचा, विद्युत्-गति हतचेतन
+
+                राम में जगी स्मृति, हुए सजग पा भाव प्रमन।
+
+                “यह है उपाय” कह उठे राम ज्यों मंद्रित घन—
+
+                “कहती थीं माता मुझे सदा राजीवनयन!
+
+                दो नील कमल हैं शेष अभी, यह पुरश्चरण
+
+                पूरा करता हूँ देकर मातः एक नयन।''
+
+                कहकर देखा तूणीर ब्रह्मशर रहा झलक,
+
+                ले लिया हस्त, लक-लक करता वह महाफलक;
+
+                ले अस्त्र वाम कर, दक्षिण कर दक्षिण लोचन
+
+                ले अर्पित करने को उद्यत हो गए सुमन।
+
+                जिस क्षण बँध गया बेधने को दृग दृढ़ निश्चय,
+
+                काँपा ब्रह्मांड, हुआ देवी का त्वरित उदय :—
+
+                ‘‘साधु, साधु, साधक धीर, धर्म-धन धन्य राम!”
+
+                कह लिया भगवती ने राघव का हस्त थाम।
+
+                देखा राम ने—सामने श्री दुर्गा, भास्वर
+
+                वाम पद असुर-स्कंध पर, रहा दक्षिण हरि पर:
+
+                ज्योतिर्मय रूप, हस्त दश विविध अस्त्र-सज्जित,
+
+                मंद स्मित मुख, लख हुई विश्व की श्री लज्जित,
+
+                हैं दक्षिण में लक्ष्मी, सरस्वती वाम भाग,
+
+                दक्षिण गणेश, कार्तिक बाएँ रण-रंग राग,
+
+                मस्तक पर शंकर। पदपद्मों पर श्रद्धाभर
+
+                श्री राघव हुए प्रणत मंदस्वर वंदन कर।
+
+                ''होगी जय, होगी जय, हे पुरुषोत्तम नवीन!''
+
+                कह महाशक्ति राम के वदन में हुईं लीन।
+            </p>
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <div class="footer-parent">
+        <div class="child-footer">
+            <h1>न्यूज़लेटर के लिए साइन अप करें</h1>
+            <h6>आपको नियमित अपडेट भेजने के अलावा अन्य किसी भी उद्देश्य के लिए आपके ई-मेल <br> का उपयोग नहीं किया जाएगा।
+            </h6>
+        </div>
+        <div class="child-footer">
+            <input type="text" placeholder="ईमेल" class="plac">
+            <input type="checkbox" class="checkbox">
+            <div class="text">
+                <h6 class="h666"> मैंने <span class="sp">रेख़्ता फ़ाउंडेशन</span> की <span class="sp">गोपनीयता नीति</span>
+                    पढ़ ली है और इससे सहमत हूँ। </h6>
+            </div>
+            <div class="box-plac">
+                <h4>सब्सक्राइब </h4>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="last-fotter">
+        <div class="child-foot">
+            <h3 id="id1">रचना-निधि </h3>
+
+            <ul>
+
+                <li class="lt">
+                    कवि <br> 1369
+
+                </li>
+
+                <li class="car">
+                    कविता <br> 15293
+                </li>
+
+                <li class="lt">
+                    पद  <br> 1358
+                </li>
+
+                <li class="lt">
+                    दोहा <br>3025
+                </li>
+
+                <li class="lt">
+                    लोकगीत <br>394
+                </li>
+            </ul>
+
+            <h3 id="id2"> जानकारी </h3>
+            <ul>
+                <li>
+                    साइट : परिचय
+
+                </li>
+
+                <li>
+                    संस्थापक : परिचय
+                </li>
+
+                <li>
+                    रेख़्ता फ़ाउंडेशन : परिचय
+                </li>
+
+                <li>
+                    संपर्क कीजिए
+                </li>
+
+                <li>
+                    करियर
+                </li>
+
+
+                <li>
+
+                    सहयोग
+                </li>
+            </ul>
+
+            <h3 id="id3">हमारी वेबसाइट्स</h3>
+            <ul>
+                <li class="rd3">
+                    रेख़्ता
+
+                </li>
+
+                <li class="rd3">
+                    सूफ़ीनामा
+                </li>
+
+                <li class="rd3">
+                    रेख़्ता डिक्शनरी
+                </li>
+
+                <li class="rd3">
+                    हिन्दवी डिक्शनरी
+                </li>
+
+                <li class="rd3">
+                    हिन्दवी डिक्शनरी
+                </li>
+
+
+
+            </ul>
+
+            <h3 id="id3" class="t6"> जानकारी </h3>
+
+            <!-- <div class="box4"></div> -->
+        </div>
+
+        <div id="btn">
+            <h6>संपर्क कीजिए</h6>
+        </div>
+
+    </div>
+
+    <div class="input3">
+        <input type="text" placeholder="नाम" class="inp">
+        <input type="text" placeholder="ईमेल" class="inp1">
+        <input type="text" placeholder="संदेश" class="inp2">
+
+    </div>
+
+    <div class="btn3">
+        <h3>भेजिए</h3>
+    </div>
+
+
+    <script>
+
+        const toogle = document.getElementById('menu-toggle')
+        const navlink = document.getElementById('nav-link')
+        toogle.addEventListener('click', () => {
+            navlink.classList.toggle('active');
+        })
+    </script>
+
+</body>
+
+</html>
